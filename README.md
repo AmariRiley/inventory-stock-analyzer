@@ -161,7 +161,7 @@ After running the scripts, you'll have:
 
 ✅ 5 PNG charts in results/ showing key insights
 
-📁 Project Structure
+## 📁 Project Structure
 
 ```
 inventory-stock-analyzer/
@@ -188,7 +188,7 @@ inventory-stock-analyzer/
 ├── README.md # Project documentation
 └── LICENSE # MIT license
 ```
- 
+ ---
 
 ## 📊 SQL Queries Overview
 
