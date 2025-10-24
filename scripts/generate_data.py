@@ -15,7 +15,9 @@ np.random.seed(42)
 
 print("Generating sample data...\n")
 
+# ============================================
 # 1. Products Data
+# ============================================
 
 print("Creating products...")
 
@@ -24,6 +26,8 @@ products = []
 
 for i in range(150):
     category = random.choice(categories)
+    safety_stock = random.randint(10, 50)
+    reorder_point = random.randint(safety_stock + 10, 100)
     products.append({
         'product_id': i + 1,
         'sku': f'SKU-{fake.unique.random_number(digits=6)}',
@@ -31,9 +35,9 @@ for i in range(150):
         'category': category,
         'unit_cost': round(random.uniform(5, 200), 2),
         'unit_price': round(random.uniform(10, 400), 2),
-        'reorder_point': random.randint(20, 100),
+        'reorder_point': reorder_point,
         'reorder_quantity': random.randint(50, 200),
-        'safety_stock': random.randint(10, 50),
+        'safety_stock': safety_stock,
         'supplier_id': random.randint(1, 20),
         'lead_time_days': random.randint(7, 30)
     })
@@ -42,7 +46,9 @@ df_products = pd.DataFrame(products)
 df_products.to_csv('data/products.csv', index=False)
 print(f"Created {len(products)} products")
 
+# ============================================
 #2. Suppliers Data
+# ============================================
 
 print("Creating suppliers...")
 
@@ -62,7 +68,9 @@ df_suppliers = pd.DataFrame(suppliers)
 df_suppliers.to_csv('data/suppliers.csv', index=False)
 print(f"Created {len(suppliers)} suppliers")
 
+# ============================================
 #3. Current Inventory Data
+# ============================================
 
 print("Creating inventory levels...")
 
@@ -76,17 +84,17 @@ for product_id in range(1, 151):
     if scenario < 0.15: #15% critical - out of stock or very low
         qty = random.randint(0, 5)
     elif scenario < 0.30: #15% below safety stock
-        qty = random.randint(1, product['safety_stock'])
+        qty = random.randint(1, int(product['safety_stock']))
     elif scenario < 0.50: # 20% below reorder point
-        qty = random.randint(product['safety_stock'], product['reorder_point'])
+        qty = random.randint(int(product['safety_stock']), int(product['reorder_point']))
     else: # 50% healthy stock levels
-        qty = random.randint(product['reorder_point'], product['reorder_point'] * 3)
+        qty = random.randint(int(product['reorder_point']), int(product['reorder_point']) * 3)
 
         inventory.append({
             'product_id': product_id,
             'quantity_on_hand': qty,
             'warehouse_location': random.choice(['Warehouse A', 'Warehouse B', 'Warehouse C']),
-            'last_counted': (datetime.now() - timedelta(days = random.randinit(0, 30))).strftime('%Y-%m-%d'),
+            'last_counted': (datetime.now() - timedelta(days = random.randint(0, 30))).strftime('%Y-%m-%d'),
             'reserved_quantity': random.randint(0, min(10, qty)) # Orders not yet shipped
         })
 
@@ -94,7 +102,9 @@ for product_id in range(1, 151):
     df_inventory.to_csv('data/inventory.csv', index=False)
     print(f" Created {len(inventory)} inventory records")
 
+# ============================================
 #4. Sales transactions from the last 6 months
+# ============================================
 
 print("Creating sales transactions...")
 
@@ -121,17 +131,20 @@ df_transactions = pd.DataFrame(transactions)
 df_transactions.to_csv('data/sales_transactions.csv', index=False)
 print(f" Created {len(transactions)} sales transactions")
 
+# ============================================
 #5. Purchase Orders (Replenishment History)
+# ============================================
+
 print("Creating purchase orders...")
 
 purchase_orders = []
 
 for i in range(100):
     product_id = random.randint(1, 150)
-    product = df_products[df_products['product_id'] == product.id].iloc[0]
+    product = df_products[df_products['product_id'] == product_id].iloc[0]
 
     order_date = (datetime.now() - timedelta(days = random.randint(0, 180))).strftime('%Y-%m-%d')
-    expected_delivery = (datetime.strptime(order_date, '%Y-%m-%d') + timedelta(days = product['lead_time_days'])).strftime('%Y-%m-%d')
+    expected_delivery = (datetime.strptime(order_date, '%Y-%m-%d') + timedelta(days = int(product['lead_time_days']))).strftime('%Y-%m-%d')
 
     # 85% on-time, 15% delayed
     if random.random() < 0.85:
@@ -142,11 +155,11 @@ for i in range(100):
     purchase_orders.append({
         'po_id': i + 1,
         'product_id': product_id,
-        'supplier_id': product['suppliers_id'],
+        'supplier_id': int(product['supplier_id']),
         'order_date': order_date,
         'expected_delivery_date': expected_delivery,
         'actual_delivery_date': actual_delivery,
-        'quantity_ordered': product['reorder_quantity'],
+        'quantity_ordered': int(product['reorder_quantity']),
         'unit_cost': product['unit_cost'],
         'status': 'Delivered'
     })
@@ -169,11 +182,11 @@ print(f"Purchase Orders: {len(purchase_orders)}")
 
 # Quick Insights
 critical_stock = df_inventory[df_inventory['quantity_on_hand'] == 0]
-low_stock = df_inventory[df_inventory['quantity_on_hand'] < df_products['safety_stock'].values]
+#low_stock = df_inventory[df_inventory['quantity_on_hand'] < df_products['safety_stock'].values]
 
 print(f"\nInventory Alerts:")
 print(f"Out of Stock: {len(critical_stock)} products")
-print(f"Below Safety Stock: {len(low_stock)} products")
+#print(f"Below Safety Stock: {len(low_stock)} products")
 
 print("\n All CSV files saved to 'data/' folder")
 print("\nNext step: Run scripts/create_database.py")

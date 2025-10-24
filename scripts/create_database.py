@@ -85,3 +85,69 @@ cursor.execute('''
 
 conn.commit()
 print(" Tables created")
+
+# ============================================
+# LOAD CSV DATA
+# ============================================
+
+print("Loading CSV data...")
+
+# Load products
+df = pd.read_csv('data/products.csv')
+df.to_sql('products', conn, if_exists='replace', index=False)
+print(f"✓ Loaded {len(df)} products")
+
+# Load suppliers
+df = pd.read_csv('data/suppliers.csv')
+df.to_sql('suppliers', conn, if_exists='replace', index=False)
+print(f"✓ Loaded {len(df)} suppliers")
+
+# Load inventory
+df = pd.read_csv('data/inventory.csv')
+df.to_sql('inventory', conn, if_exists='replace', index=False)
+print(f"✓ Loaded {len(df)} inventory records")
+
+# Load transactions
+df = pd.read_csv('data/sales_transactions.csv')
+df.to_sql('sales_transactions', conn, if_exists='replace', index=False)
+print(f"✓ Loaded {len(df)} sales transactions")
+
+# Load purchase orders
+df = pd.read_csv('data/purchase_orders.csv')
+df.to_sql('purchase_orders', conn, if_exists='replace', index=False)
+print(f"✓ Loaded {len(df)} purchase orders\n")
+
+# ============================================
+# CREATE INDEXES
+# ============================================
+
+print("Creating indexes for performance...")
+
+cursor.execute('CREATE INDEX IF NOT EXISTS idx_product_category ON products(category)')
+cursor.execute('CREATE INDEX IF NOT EXISTS idx_inventory_quantity ON inventory(quantity_on_hand)')
+cursor.execute('CREATE INDEX IF NOT EXISTS idx_transaction_date ON sales_transactions(transaction_date)')
+cursor.execute('CREATE INDEX IF NOT EXISTS idx_transaction_product ON sales_transactions(product_id)')
+
+conn.commit()
+print("✓ Indexes created\n")
+
+# ============================================
+# VERIFY DATA
+# ============================================
+
+print("=" * 50)
+print("DATABASE CREATED SUCCESSFULLY!")
+print("=" * 50)
+
+print("\nVerifying data...")
+
+tables = ['products', 'suppliers', 'inventory', 'sales_transactions', 'purchase_orders']
+for table in tables:
+    cursor.execute(f'SELECT COUNT(*) FROM {table}')
+    count = cursor.fetchone()[0]
+    print(f"{table}: {count} records")
+
+conn.close()
+
+print("\n✓ Database file: inventory.db")
+print("\nNext step: Run scripts/visualize_results.py")

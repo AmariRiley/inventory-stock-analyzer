@@ -97,7 +97,7 @@ SELECT
     product_id,
     product_name,
     category,
-    ROUND(total_value, 2) sd inventory_value,
+    ROUND(total_value, 2) as inventory_value,
     ROUND(100.0 * cumulative_value / grand_total, 2) as cumulative_pct,
     CASE
         WHEN 100.0 * cumulative_value / grand_total <= 80 THEN 'A'
@@ -122,7 +122,7 @@ ax2 = ax1.twinx()
 # Bar chart for inventory value
 colors = ['red' if cat == 'A' else 'gold' if cat == 'B' else 'green'
           for cat in top_30['abc_category']]
-ax1.bar(x_pos, top_30['inventory'], color=colors, alpha=0.7)
+ax1.bar(x_pos, top_30['inventory_value'], color=colors, alpha=0.7)
 ax1.set_xlabel('Products (ranked by value)')
 ax1.set_ylabel('Inventory Value ($)', color='black')
 ax1.tick_params(axis='y', labelcolor='black')
@@ -173,7 +173,7 @@ query = """
 WITH sales_summary AS (
     SELECT
         p.category,
-        SUM(i.quantity_on_hand * p.unit_cost) as cogs
+        SUM(st.quantity_sold * p.unit_cost) as cogs
     FROM sales_transactions st
     JOIN products p ON st.product_id = p.product_id
     GROUP BY p.category 
@@ -299,7 +299,7 @@ SELECT
     2) as on_time_pct,
     COUNT(*) as total_orders,
     s.reliability_score
-FROM supplier s
+FROM suppliers s
 LEFT JOIN purchase_orders po ON s.supplier_id = po.supplier_id
 GROUP BY s.supplier_id, s.supplier_name, s.reliability_score
 HAVING COUNT(*) >= 3
@@ -339,26 +339,26 @@ print("="*60)
 
 # Overall inventory health
 query = "SELECT COUNT(*) as total_products FROM products"
-total_products = pd.read_sql(quert, conn).iloc[0]['total_products']
+total_products = pd.read_sql(query, conn).iloc[0]['total_products']
 
 query = "SELECT SUM(quantity_on_hand * unit_cost) as total_value FROM inventory i JOIN products p ON i.product_id = p.product_id"
 total_value = pd.read_sql(query, conn).iloc[0]['total_value']
 
 query = "SELECT COUNT(*) FROM inventory i JOIN products p ON i.product_id = p.product_id WHERE i.quantity_on_hand = 0"
-out_of_stock = pd.read_sql(query, conn).iloc[0][0]
+out_of_stock = pd.read_sql(query, conn).iloc[0, 0]
 
 query = "SELECT COUNT (*) FROM inventory i JOIN products p ON i.product_id = p.product_id WHERE i.quantity_on_hand < p.reorder_point"
-needs_reorder = pd.read_sql(query, conn).iloc[0][0]
+needs_reorder = pd.read_sql(query, conn).iloc[0, 0]
 
 query = "SELECT SUM(p.reorder_quantity * p.unit_cost) FROM products p JOIN inventory i ON p.product_id = i.product_id WHERE i.quantity_on_hand < p.reorder_point"
-reorder_cost = pd.read_sql(query, conn)
+reorder_cost = pd.read_sql(query, conn).iloc[0, 0] or 0
 
 print(f"\nInventory Overview:")
 print(f" Total Products: {total_products}")
-print(f" Total Inventory Value: ${total_value}:, .2f")
+print(f" Total Inventory Value: ${total_value:,.2f}")
 print(f" Out of Stock: {out_of_stock} products ({100 * out_of_stock / total_products:.1f}%)")
 print(f" Needs Reorder: {needs_reorder} products ({100 * needs_reorder / total_products:.1f}%)")
-print(f" Estimated Reorder Cost: ${reorder_cost:, .2f}")
+print(f" Estimated Reorder Cost: ${reorder_cost:,.2f}")
 
 # Slow-moving inventory
 query = """
@@ -374,7 +374,7 @@ LEFT JOIN (
 WHERE COALESCE(rs.total_sold, 0) < 5 AND i.quantity_on_hand > 0
 """
 
-slow_value = pd.read_sql(query, conn)
+slow_value = pd.read_sql(query, conn).iloc[0, 0] or 0
 
 print(f" \nSlow-Moving Inventory:")
 print(f" Capital Tied Up: ${slow_value:,.2f}")
