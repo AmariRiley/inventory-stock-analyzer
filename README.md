@@ -115,22 +115,35 @@ Supplier Performance
 Database & Data Processing:
 
 SQLite 3 - Lightweight relational database
+
 Python 3.13 - Data generation and analysis
+
 pandas 2.x - Data manipulation and analysis
+
 SQLAlchemy - Database connectivity
+
 Data Visualization:
 
 matplotlib 3.x - Statistical plotting
+
 seaborn 0.13 - Enhanced visualizations
+
 Faker - Realistic sample data generation
+
 SQL Techniques Demonstrated:
 
 ✅ Window functions (SUM OVER, cumulative totals)
+
 ✅ Common Table Expressions (CTEs)
+
 ✅ Complex multi-table joins (3-4 tables)
+
 ✅ Aggregate functions with GROUP BY
+
 ✅ Date arithmetic and calculations
+
 ✅ CASE statements for conditional logic
+
 🚀 Quick Start
 Prerequisites
 Python 3.8 or higher
