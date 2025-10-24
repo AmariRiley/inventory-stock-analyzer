@@ -1,5 +1,5 @@
 
-# 🚨 Inventory Stockout Analyzer
+# Inventory Stockout Analyzer
 
 ### SQL-based inventory analysis system identifying stockout risks and optimizing reorder decisions
 
