@@ -152,14 +152,15 @@ python scripts/visualize_results.py
 # View results
 explorer results\  # Windows
 # open results/    # Mac/Linux
-What Gets Generated
+```
+### What Gets Generated
 After running the scripts, you'll have:
 
-✅ 5 CSV files with sample data in data/
+- ✅ 5 CSV files with sample data in data/
+- ✅ SQLite database (inventory.db) with 5 tables
+- ✅ 5 PNG charts in results/ showing key insights
 
-✅ SQLite database (inventory.db) with 5 tables
-
-✅ 5 PNG charts in results/ showing key insights
+---
 
 ## 📁 Project Structure
 
@@ -293,27 +294,9 @@ If implemented in a real business, this system could:
 
 ---
 
-## 📚 Learning Resources
-
-This project demonstrates concepts from:
-
-- **SQL:** Window functions, CTEs, complex joins  
-- **Inventory Management:** ABC analysis, reorder points, turnover ratios  
-- **Data Analysis:** Pandas, aggregations, time-series  
-- **Visualization:** Matplotlib, Seaborn, dashboard design  
-
-**Recommended Reading:**
-
-- *Inventory Management Explained* – David J. Piasecki  
-- *SQL for Data Analysis* – Cathy Tanimura  
-- *Python for Data Analysis* – Wes McKinney
-
----
-
 ## 📄 License
 
 This project is licensed under the MIT License – see the LICENSE file for details.  
 
 You are free to use this code for learning, portfolio purposes, or commercial applications.
-
 </div>
