@@ -205,3 +205,10 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Allow generated results and data files
+!results/
+!results/*.png
+!results/*.csv
+!data/
+!data/*.csv
