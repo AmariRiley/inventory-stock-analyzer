@@ -6,58 +6,95 @@ SQL-based inventory analysis system identifying stockout risks and optimizing re
 
 </div>
 💼 Business Problem
+
 Retailers and distributors face two costly inventory challenges:
 
 Stockouts → Lost sales and unhappy customers
+
 Overstock → Capital tied up in slow-moving products
+
 This system analyzes inventory data to provide actionable recommendations that reduce both risks and optimize working capital.
 
 🎯 Key Features
+
 📊 Critical Stockout Alerts
+
 Automatically identifies products at risk with three urgency levels:
 
 🚨 CRITICAL - Out of stock
+
 ⚠️ URGENT - Below safety stock
+
 ⚡ WARNING - Below reorder point
+
 📈 ABC Inventory Classification
+
 Applies the Pareto principle to categorize products by value:
 
 A-items: Top 20% of products = 80% of inventory value
+
 B-items: Next 30% of products = 15% of value
+
 C-items: Bottom 50% of products = 5% of value
+
 🔄 Inventory Turnover Analysis
+
 Measures how efficiently inventory is sold by category, identifying slow-moving products that tie up capital.
 
 💰 Smart Reorder Recommendations
+
 Calculates optimal reorder quantities based on:
 
 Current stock levels
+
 Safety stock requirements
+
 Average daily sales velocity
+
 Supplier lead times
+
 🏭 Supplier Performance Tracking
+
 Evaluates suppliers on on-time delivery rates to prioritize reliable vendors for critical reorders.
 
 💡 Key Findings
+
 From analyzing 150 products across 6 categories:
 
 📦 Inventory Health
+
 Total Inventory Value: $1,041,418
+
 Products Out of Stock: 0 (0%)
+
 Products Below Reorder Point: 0 (0%)
+
 Well-stocked inventory with no critical stockout alerts
+
 📈 ABC Analysis Results
+
 20% of products account for 80% of inventory value (classic Pareto)
+
 Enables focused management on high-value A-category items
+
 Opportunity to reduce safety stock on low-value C-category items
+
 🔄 Turnover Insights
+
 Average turnover varies significantly by category
+
 Identifies fast-moving vs. slow-moving product groups
+
 Enables data-driven purchasing and stocking decisions
+
 🏭 Supplier Metrics
+
 Tracked 20 suppliers across 100 purchase orders
+
 Calculated on-time delivery percentages per supplier
+
 Risk assessment for critical reorders based on historical performance
+
 📊 Sample Results
 Stockout Alerts Dashboard
 ![Stockout Alerts](results/01_stockout_alerts.png)
