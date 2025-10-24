@@ -180,56 +180,32 @@ After running the scripts, you'll have:
 
 📁 Project Structure
 
-inventory-stockout-analyzer/
-
-├── data/                          # Sample CSV source files
-│   ├── products.csv               # 150 product records
-
-│   ├── suppliers.csv              # 20 supplier records
-
-│   ├── inventory.csv              # Current stock levels
-
-│   ├── sales_transactions.csv    # 800 historical sales
-
-│   └── purchase_orders.csv        # 100 replenishment orders
-
+```
+inventory-stock-analyzer/
+├── data/ # Sample CSV source files
+│ ├── products.csv # 150 product records
+│ ├── suppliers.csv # 20 supplier records
+│ ├── inventory.csv # Current stock levels
+│ ├── sales_transactions.csv # 800 historical sales
+│ └── purchase_orders.csv # 100 replenishment orders
 │
-├── scripts/                       # Python analysis scripts
-
-│   ├── generate_data.py           # Creates realistic sample data
-
-│   ├── create_database.py         # Builds SQLite database
-
-│   └── visualize_results.py       # Generates charts and insights
-
+├── scripts/ # Python analysis scripts
+│ ├── generate_data.py # Creates realistic sample data
+│ └── create_database.py # Builds SQLite database
 │
-
-├── sql/                           # SQL query library
-
-│   └── analysis.sql               # 8 key analytical queries
-
+├── sql/ # SQL queries and schema definitions
+│ ├── schema.sql # Table creation scripts
+│ └── analysis_queries.sql # Analytical queries
 │
-
-├── results/                       # Output visualizations
-
-│   ├── 01_stockout_alerts.png
-
-│   ├── 02_abc_analysis.png
-
-│   ├── 03_inventory_turnover.png
-
-│   ├── 04_reorder_priorities.png
-
-│   └── 05_supplier_performance.png
-
+├── results/ # Output visualizations and reports
+│ ├── stockout_summary.csv # Summary results
+│ └── stockout_chart.png # Visualization example
 │
-├── inventory.db                   # SQLite database file
+├── inventory.db # SQLite database file
+├── README.md # Project documentation
+└── LICENSE # MIT license
+```
 
-├── requirements.txt               # Python dependencies
-
-├── README.md                      # This file
-
-└── LICENSE                        # MIT License
 
 📊 SQL Queries Overview
 
