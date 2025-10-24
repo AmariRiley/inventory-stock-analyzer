@@ -1,0 +1,151 @@
+product_id,sku,product_name,category,unit_cost,unit_price,reorder_point,reorder_quantity,safety_stock,supplier_id,lead_time_days
+1,SKU-670487,Home & Garden Brother Ago,Home & Garden,134.14,381.36,66,196,26,3,12
+2,SKU-777572,Food Face Election,Food,9.51,66.3,51,154,35,18,17
+3,SKU-234053,Electronics Chair Since,Electronics,186.8,156.94,59,145,26,16,18
+4,SKU-107473,Electronics Require Sit,Electronics,143.26,43.11,91,112,24,4,9
+5,SKU-935518,Automotive Offer Begin,Automotive,188.21,76.07,49,89,28,19,12
+6,SKU-619176,Sports Knowledge Almost,Sports,190.5,21.14,78,135,19,13,28
+7,SKU-31244,Home & Garden Better Discover,Home & Garden,35.97,110.26,56,107,42,3,30
+8,SKU-243962,Clothing Mouth Play,Clothing,153.19,15.1,96,81,10,16,16
+9,SKU-27824,Food Option Decide,Food,166.19,109.64,81,189,47,19,9
+10,SKU-750800,Clothing Rate Science,Clothing,197.26,278.68,82,109,49,4,25
+11,SKU-571412,Food Kind Discussion,Food,31.55,289.96,92,112,23,9,30
+12,SKU-471029,Home & Garden Perform Fall,Home & Garden,19.53,331.91,50,171,35,10,29
+13,SKU-848749,Sports True According,Sports,169.54,113.96,87,108,17,8,26
+14,SKU-795667,Clothing Sure Collection,Clothing,96.37,238.24,33,165,11,19,19
+15,SKU-732052,Food Knowledge Grow,Food,63.84,51.09,55,52,28,15,9
+16,SKU-291369,Sports Clearly Dinner,Sports,18.07,233.44,59,185,14,19,30
+17,SKU-800581,Clothing Great Blue,Clothing,14.2,377.41,94,173,49,14,20
+18,SKU-97251,Home & Garden Husband Bill,Home & Garden,103.43,79.51,59,133,17,3,27
+19,SKU-376417,Automotive Throw Guy,Automotive,96.27,268.23,59,131,17,4,17
+20,SKU-633052,Electronics Everything Surface,Electronics,151.21,190.74,36,103,20,9,15
+21,SKU-45561,Electronics Show Machine,Electronics,150.17,320.15,96,156,39,9,15
+22,SKU-562275,Clothing Capital Win,Clothing,62.82,304.19,91,108,43,5,8
+23,SKU-396922,Clothing Bar Old,Clothing,8.3,241.91,65,68,46,14,17
+24,SKU-307419,Home & Garden Themselves Production,Home & Garden,74.15,325.65,74,84,38,4,27
+25,SKU-648564,Home & Garden Value Training,Home & Garden,12.55,81.28,42,109,19,3,24
+26,SKU-379201,Food Participant Dark,Food,23.35,203.81,32,120,20,15,18
+27,SKU-738797,Automotive Available Answer,Automotive,25.76,159.91,95,99,50,3,19
+28,SKU-693384,Automotive Drive Spring,Automotive,137.42,301.71,70,198,25,6,20
+29,SKU-303445,Home & Garden Base Top,Home & Garden,169.76,199.59,81,89,26,14,30
+30,SKU-244098,Home & Garden Trial Blood,Home & Garden,94.86,232.04,82,101,19,1,11
+31,SKU-398591,Clothing Fall Long,Clothing,71.51,383.63,94,158,36,2,20
+32,SKU-666563,Electronics They His,Electronics,132.33,372.49,99,86,24,6,23
+33,SKU-170555,Clothing Hospital Hear,Clothing,175.97,18.75,51,74,17,7,19
+34,SKU-219684,Clothing Religious Example,Clothing,173.1,266.75,81,134,19,2,19
+35,SKU-735911,Home & Garden Write Result,Home & Garden,99.68,280.01,53,154,26,11,16
+36,SKU-679514,Electronics Away Politics,Electronics,15.14,222.25,97,186,36,8,11
+37,SKU-665822,Sports Congress None,Sports,36.06,273.59,100,72,49,10,7
+38,SKU-764544,Sports Election Common,Sports,177.74,25.55,96,78,36,10,13
+39,SKU-484714,Automotive Hundred Expect,Automotive,143.97,60.13,55,146,23,10,9
+40,SKU-970342,Automotive Push Rise,Automotive,189.36,327.18,31,175,10,3,21
+41,SKU-584004,Electronics Discuss Reveal,Electronics,8.4,367.87,82,78,30,10,19
+42,SKU-340035,Home & Garden Threat Special,Home & Garden,166.76,91.53,70,186,22,10,22
+43,SKU-813694,Automotive Arrive Drop,Automotive,117.92,339.11,27,153,14,9,18
+44,SKU-861722,Electronics Almost Support,Electronics,165.73,140.81,71,177,11,20,10
+45,SKU-330776,Food Institution Executive,Food,166.33,45.94,74,159,32,13,23
+46,SKU-69403,Automotive Development White,Automotive,66.2,182.67,27,143,10,12,19
+47,SKU-988712,Home & Garden Our Under,Home & Garden,113.23,317.72,87,50,15,12,22
+48,SKU-752787,Electronics Forward Difference,Electronics,154.58,22.93,55,75,22,1,16
+49,SKU-687277,Clothing Money Individual,Clothing,185.45,86.03,76,199,44,4,18
+50,SKU-927657,Home & Garden Who Question,Home & Garden,78.07,267.66,78,92,42,16,17
+51,SKU-481141,Food Character Evidence,Food,106.92,250.43,69,96,47,2,11
+52,SKU-146413,Automotive Employee Size,Automotive,10.81,114.96,43,144,31,1,21
+53,SKU-588637,Food Nothing Everyone,Food,185.78,87.95,55,91,31,6,28
+54,SKU-783300,Electronics Pattern Later,Electronics,78.54,365.5,76,53,46,12,17
+55,SKU-941435,Automotive Past Inside,Automotive,47.3,365.71,54,52,27,11,16
+56,SKU-379580,Clothing Discuss Certainly,Clothing,118.3,254.72,92,164,44,4,28
+57,SKU-534277,Home & Garden Minute Benefit,Home & Garden,130.08,136.93,56,149,21,16,22
+58,SKU-792495,Home & Garden Anyone Traditional,Home & Garden,151.44,108.54,88,62,45,12,11
+59,SKU-114975,Automotive Claim Product,Automotive,113.43,362.73,96,94,42,5,30
+60,SKU-167753,Home & Garden Structure Response,Home & Garden,134.48,30.28,87,114,48,13,7
+61,SKU-442666,Food Pick Attack,Food,133.44,82.94,46,164,34,11,29
+62,SKU-403457,Home & Garden I Pick,Home & Garden,9.39,345.7,54,73,43,7,25
+63,SKU-490785,Clothing Newspaper Enter,Clothing,11.64,259.49,86,110,44,1,13
+64,SKU-580099,Sports Traditional Yes,Sports,63.56,361.0,76,103,39,15,13
+65,SKU-12038,Automotive Response Set,Automotive,62.4,41.88,80,138,14,7,28
+66,SKU-120116,Home & Garden Rest Value,Home & Garden,168.73,76.08,61,188,46,11,14
+67,SKU-563054,Automotive Social Example,Automotive,195.4,87.66,42,156,20,20,24
+68,SKU-805934,Food Put Grow,Food,101.79,121.52,52,103,33,11,7
+69,SKU-116970,Electronics Finally Learn,Electronics,52.72,68.85,45,98,12,2,15
+70,SKU-165840,Electronics Long About,Electronics,54.46,276.21,60,67,23,15,19
+71,SKU-757168,Automotive Type Serve,Automotive,152.28,50.34,76,70,48,6,30
+72,SKU-276183,Automotive Month Sound,Automotive,179.51,91.73,99,167,48,12,12
+73,SKU-187330,Sports Movement While,Sports,88.69,305.04,52,134,35,2,22
+74,SKU-111579,Clothing Truth Process,Clothing,174.38,326.32,92,78,33,13,16
+75,SKU-312942,Food Thought Purpose,Food,12.38,53.32,53,154,41,16,27
+76,SKU-532323,Automotive Politics Decide,Automotive,104.82,74.16,81,112,40,19,23
+77,SKU-160263,Clothing Hour Sound,Clothing,172.83,216.93,80,127,23,12,22
+78,SKU-169396,Clothing Notice Start,Clothing,183.72,173.46,79,180,25,7,7
+79,SKU-967242,Electronics Nice Why,Electronics,14.35,250.38,92,134,30,14,9
+80,SKU-599,Home & Garden Place Game,Home & Garden,144.95,246.81,57,92,32,19,29
+81,SKU-512340,Food After Brother,Food,50.77,171.39,100,107,36,6,25
+82,SKU-974230,Sports Him Unit,Sports,196.41,325.82,84,84,35,16,28
+83,SKU-872064,Clothing Surface Food,Clothing,101.43,260.19,69,132,21,10,25
+84,SKU-251083,Sports Article Effect,Sports,87.47,217.03,67,152,26,2,10
+85,SKU-920659,Food Our Your,Food,80.41,113.01,81,138,16,5,26
+86,SKU-82582,Sports Bed Sign,Sports,27.51,238.6,24,172,11,17,11
+87,SKU-509597,Electronics Team Authority,Electronics,63.05,399.7,99,155,16,14,12
+88,SKU-797549,Home & Garden No Space,Home & Garden,137.05,48.97,95,98,33,15,27
+89,SKU-131869,Clothing Career Receive,Clothing,198.84,299.93,67,198,43,14,18
+90,SKU-498369,Clothing Your Often,Clothing,175.55,221.41,87,55,20,10,10
+91,SKU-173148,Sports Evidence News,Sports,27.64,271.39,90,158,36,5,29
+92,SKU-914812,Electronics Policy Land,Electronics,98.7,33.59,31,94,17,19,22
+93,SKU-222086,Electronics Woman Notice,Electronics,22.0,341.42,55,85,15,3,30
+94,SKU-791952,Home & Garden Show Road,Home & Garden,25.17,219.21,55,60,23,9,26
+95,SKU-210922,Electronics Sell Forget,Electronics,45.43,335.69,73,191,41,10,26
+96,SKU-418373,Food Remain Rate,Food,104.02,294.07,91,171,45,1,10
+97,SKU-391559,Sports Left We,Sports,129.97,223.4,37,99,15,8,17
+98,SKU-542717,Automotive Live Camera,Automotive,31.43,376.42,90,82,40,14,17
+99,SKU-259947,Clothing Down Attack,Clothing,32.01,247.91,95,51,43,6,16
+100,SKU-354508,Automotive Against Per,Automotive,23.52,326.35,66,188,47,2,8
+101,SKU-580828,Electronics Drug Per,Electronics,123.48,180.63,41,106,26,7,16
+102,SKU-230914,Automotive Account Avoid,Automotive,156.45,373.66,73,50,39,7,29
+103,SKU-742225,Sports Program Artist,Sports,140.22,164.24,91,150,22,16,7
+104,SKU-240062,Electronics Author Western,Electronics,33.98,64.72,79,186,35,3,21
+105,SKU-32938,Home & Garden Trade Give,Home & Garden,171.78,249.57,88,192,49,20,7
+106,SKU-74299,Clothing My Economy,Clothing,46.32,286.77,76,156,17,17,8
+107,SKU-292004,Electronics Relationship Mention,Electronics,28.2,187.24,56,83,19,11,12
+108,SKU-224643,Clothing Notice Cause,Clothing,61.96,13.17,91,108,26,7,17
+109,SKU-758490,Automotive Worry Us,Automotive,112.69,307.25,54,98,44,6,30
+110,SKU-598782,Sports Part Material,Sports,108.26,146.35,57,154,20,5,12
+111,SKU-254801,Electronics Still Material,Electronics,130.61,127.7,29,153,19,2,9
+112,SKU-846721,Electronics Investment Customer,Electronics,148.9,262.59,94,81,29,8,30
+113,SKU-98907,Electronics Bill Reason,Electronics,145.53,44.71,70,111,36,17,8
+114,SKU-451989,Food Health Land,Food,143.19,324.66,42,169,27,5,19
+115,SKU-431071,Home & Garden Manage Treat,Home & Garden,185.77,397.64,95,162,13,10,12
+116,SKU-764491,Automotive Arm Report,Automotive,6.95,189.39,72,65,36,9,11
+117,SKU-685197,Home & Garden Race Billion,Home & Garden,20.94,213.97,31,88,18,16,10
+118,SKU-63556,Home & Garden Interesting Should,Home & Garden,71.21,310.68,74,109,23,12,21
+119,SKU-355784,Electronics Such Training,Electronics,133.42,33.4,68,83,38,1,29
+120,SKU-114576,Sports Energy Dark,Sports,17.97,33.22,72,116,42,12,26
+121,SKU-199448,Automotive Not List,Automotive,149.37,296.45,52,173,27,19,14
+122,SKU-146991,Food Knowledge Cover,Food,22.57,221.1,73,167,32,3,11
+123,SKU-292075,Food Maintain Enjoy,Food,114.29,98.08,73,102,39,10,16
+124,SKU-916964,Clothing Wind Bag,Clothing,141.05,162.58,57,111,40,19,17
+125,SKU-464656,Food System Training,Food,96.62,135.53,92,51,33,14,29
+126,SKU-897546,Home & Garden Oil Billion,Home & Garden,36.22,106.04,99,150,14,20,21
+127,SKU-53045,Clothing Reach Now,Clothing,152.33,312.53,84,95,30,5,22
+128,SKU-876638,Home & Garden Administration Better,Home & Garden,86.6,308.16,79,73,42,6,24
+129,SKU-971366,Sports Some Time,Sports,112.33,296.19,36,67,18,4,17
+130,SKU-247861,Sports Compare Investment,Sports,168.96,313.36,56,146,25,16,29
+131,SKU-509231,Food Medical Different,Food,125.08,227.11,82,53,31,17,26
+132,SKU-906651,Sports Institution Weight,Sports,184.57,74.89,84,81,44,8,20
+133,SKU-61483,Food Community Hundred,Food,174.66,312.78,59,140,21,10,19
+134,SKU-2260,Food In Evidence,Food,78.03,145.89,61,74,22,11,22
+135,SKU-971524,Food Step Still,Food,151.63,350.3,58,195,23,9,18
+136,SKU-477110,Automotive Feeling Land,Automotive,129.13,11.44,81,110,26,5,25
+137,SKU-730429,Sports Side Step,Sports,86.47,54.83,70,103,31,2,12
+138,SKU-582765,Food Recently Serious,Food,126.2,386.08,90,114,25,7,7
+139,SKU-510311,Clothing Clear Customer,Clothing,35.14,209.52,94,139,17,4,29
+140,SKU-311120,Food Director Article,Food,12.7,17.11,94,144,43,3,15
+141,SKU-607314,Electronics Simply Occur,Electronics,155.76,242.45,86,95,10,11,15
+142,SKU-63918,Food Small Former,Food,39.24,278.07,82,186,23,3,18
+143,SKU-59942,Sports Apply Pattern,Sports,177.63,16.66,78,105,21,16,7
+144,SKU-499948,Clothing Morning Wide,Clothing,87.37,229.53,42,172,25,1,14
+145,SKU-894141,Home & Garden Nice Coach,Home & Garden,168.2,346.32,88,107,47,9,12
+146,SKU-59642,Sports Movie Be,Sports,162.31,281.76,40,84,24,16,19
+147,SKU-892697,Clothing Cultural Authority,Clothing,194.82,56.51,47,52,33,20,17
+148,SKU-623939,Clothing Author Republican,Clothing,198.53,68.09,30,168,13,14,8
+149,SKU-903682,Clothing Easy International,Clothing,82.71,60.86,47,126,37,7,17
+150,SKU-125710,Clothing Year Voice,Clothing,195.61,273.57,75,52,39,14,12

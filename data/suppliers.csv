@@ -1,0 +1,21 @@
+supplier_id,supplier_name,country,reliability_score,avg_lead_time
+1,"Sanchez, Wheeler and Harvey",Mexico,4.7,25
+2,Sandoval-Cunningham,China,4.6,27
+3,Donovan-Harris,China,4.3,12
+4,"Edwards, Baker and Anderson",Mexico,4.3,14
+5,"Evans, Stewart and Walton",Germany,3.3,7
+6,Smith PLC,Mexico,4.3,15
+7,"Ferrell, Jones and Lewis",Mexico,3.1,18
+8,Anderson-Bailey,Vietnam,4.0,30
+9,Suarez LLC,Vietnam,3.5,11
+10,Moore-Bass,USA,3.7,14
+11,"Turner, Riggs and Roman",Japan,4.7,26
+12,"Smith, Montoya and Evans",China,4.7,16
+13,"Garcia, Humphrey and Baker",Vietnam,3.5,8
+14,Newton and Sons,Germany,3.8,27
+15,Campbell-Clark,Mexico,3.4,21
+16,Harris-Walters,Germany,3.4,15
+17,Wagner-King,USA,3.8,11
+18,Davis Group,USA,4.3,27
+19,Williams-Cook,China,3.9,9
+20,Walsh LLC,Mexico,4.2,30
