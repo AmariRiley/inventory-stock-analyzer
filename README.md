@@ -1,155 +1,138 @@
-<div align="center">
 
-🚨 Inventory Stockout Analyzer
+# 🚨 Inventory Stockout Analyzer
 
-SQL-based inventory analysis system identifying stockout risks and optimizing reorder decisions
+### SQL-based inventory analysis system identifying stockout risks and optimizing reorder decisions
 
 </div>
-💼 Business Problem
+
+---
+
+## 💼 Business Problem
 
 Retailers and distributors face two costly inventory challenges:
 
-Stockouts → Lost sales and unhappy customers
-
-Overstock → Capital tied up in slow-moving products
+- **Stockouts** → Lost sales and unhappy customers  
+- **Overstock** → Capital tied up in slow-moving products
 
 This system analyzes inventory data to provide actionable recommendations that reduce both risks and optimize working capital.
 
-🎯 Key Features
+---
 
-📊 Critical Stockout Alerts
+## 🎯 Key Features
 
+### 📊 Critical Stockout Alerts
 Automatically identifies products at risk with three urgency levels:
 
-🚨 CRITICAL - Out of stock
+- 🚨 **CRITICAL** – Out of stock  
+- ⚠️ **URGENT** – Below safety stock  
+- ⚡ **WARNING** – Below reorder point
 
-⚠️ URGENT - Below safety stock
-
-⚡ WARNING - Below reorder point
-
-📈 ABC Inventory Classification
-
+### 📈 ABC Inventory Classification
 Applies the Pareto principle to categorize products by value:
 
-A-items: Top 20% of products = 80% of inventory value
+- **A-items:** Top 20% of products = 80% of inventory value  
+- **B-items:** Next 30% of products = 15% of value  
+- **C-items:** Bottom 50% of products = 5% of value
 
-B-items: Next 30% of products = 15% of value
-
-C-items: Bottom 50% of products = 5% of value
-
-🔄 Inventory Turnover Analysis
-
+### 🔄 Inventory Turnover Analysis
 Measures how efficiently inventory is sold by category, identifying slow-moving products that tie up capital.
 
-💰 Smart Reorder Recommendations
-
+### 💰 Smart Reorder Recommendations
 Calculates optimal reorder quantities based on:
 
-Current stock levels
+- Current stock levels  
+- Safety stock requirements  
+- Average daily sales velocity  
+- Supplier lead times
 
-Safety stock requirements
-
-Average daily sales velocity
-
-Supplier lead times
-
-🏭 Supplier Performance Tracking
-
+### 🏭 Supplier Performance Tracking
 Evaluates suppliers on on-time delivery rates to prioritize reliable vendors for critical reorders.
 
-💡 Key Findings
+---
+## 💡 Key Findings
 
 From analyzing 150 products across 6 categories:
 
-📦 Inventory Health
+### 📦 Inventory Health
 
-Total Inventory Value: $1,041,418
+- Total Inventory Value: $1,041,418  
+- Products Out of Stock: 0 (0%)  
+- Products Below Reorder Point: 0 (0%)  
 
-Products Out of Stock: 0 (0%)
+Well-stocked inventory with no critical stockout alerts.
 
-Products Below Reorder Point: 0 (0%)
+### 📈 ABC Analysis Results
 
-Well-stocked inventory with no critical stockout alerts
+- 20% of products account for 80% of inventory value (classic Pareto)  
+- Enables focused management on high-value A-category items  
+- Opportunity to reduce safety stock on low-value C-category items
 
-📈 ABC Analysis Results
+### 🔄 Turnover Insights
 
-20% of products account for 80% of inventory value (classic Pareto)
+- Average turnover varies significantly by category  
+- Identifies fast-moving vs. slow-moving product groups  
+- Enables data-driven purchasing and stocking decisions
 
-Enables focused management on high-value A-category items
+### 🏭 Supplier Metrics
 
-Opportunity to reduce safety stock on low-value C-category items
+- Tracked 20 suppliers across 100 purchase orders  
+- Calculated on-time delivery percentages per supplier  
+- Risk assessment for critical reorders based on historical performance
 
-🔄 Turnover Insights
+---
 
-Average turnover varies significantly by category
+## 📊 Sample Results
 
-Identifies fast-moving vs. slow-moving product groups
-
-Enables data-driven purchasing and stocking decisions
-
-🏭 Supplier Metrics
-
-Tracked 20 suppliers across 100 purchase orders
-
-Calculated on-time delivery percentages per supplier
-
-Risk assessment for critical reorders based on historical performance
-
-📊 Sample Results
-Stockout Alerts Dashboard
+### Stockout Alerts Dashboard
 ![Stockout Alerts](results/01_stockout_alerts.png)
 
-ABC Inventory Analysis
+### ABC Inventory Analysis
 ![ABC Analysis](results/02_abc_analysis.png)
 
-Inventory Turnover by Category
+### Inventory Turnover by Category
 ![Inventory Turnover](results/03_inventory_turnover.png)
 
-Reorder Priorities
+### Reorder Priorities
 ![Reorder Priorities](results/04_reorder_priorities.png)
 
-Supplier Performance
+### Supplier Performance
 ![Supplier Performance](results/05_supplier_performance.png)
 
-🛠️ Tech Stack
-Database & Data Processing:
+---
+## 🛠️ Tech Stack
 
-SQLite 3 - Lightweight relational database
+**Database & Data Processing:**
 
-Python 3.13 - Data generation and analysis
+- SQLite 3 – Lightweight relational database  
+- Python 3.13 – Data generation and analysis  
+- pandas 2.x – Data manipulation and analysis  
+- SQLAlchemy – Database connectivity  
 
-pandas 2.x - Data manipulation and analysis
+**Data Visualization:**
 
-SQLAlchemy - Database connectivity
+- matplotlib 3.x – Statistical plotting  
+- seaborn 0.13 – Enhanced visualizations  
+- Faker – Realistic sample data generation  
 
-Data Visualization:
+**SQL Techniques Demonstrated:**
 
-matplotlib 3.x - Statistical plotting
+- ✅ Window functions (SUM OVER, cumulative totals)  
+- ✅ Common Table Expressions (CTEs)  
+- ✅ Complex multi-table joins (3-4 tables)  
+- ✅ Aggregate functions with GROUP BY  
+- ✅ Date arithmetic and calculations  
+- ✅ CASE statements for conditional logic
 
-seaborn 0.13 - Enhanced visualizations
+---
 
-Faker - Realistic sample data generation
+## 🚀 Quick Start
 
-SQL Techniques Demonstrated:
+### Prerequisites
+- Python 3.8 or higher  
+- pip package manager
 
-✅ Window functions (SUM OVER, cumulative totals)
-
-✅ Common Table Expressions (CTEs)
-
-✅ Complex multi-table joins (3-4 tables)
-
-✅ Aggregate functions with GROUP BY
-
-✅ Date arithmetic and calculations
-
-✅ CASE statements for conditional logic
-
-🚀 Quick Start
-Prerequisites
-Python 3.8 or higher
-pip package manager
-Installation
-bash
+### Installation
+```bash
 # Clone repository
 git clone https://github.com/YOUR_USERNAME/inventory-stockout-analyzer.git
 cd inventory-stockout-analyzer
@@ -205,141 +188,133 @@ inventory-stock-analyzer/
 ├── README.md # Project documentation
 └── LICENSE # MIT license
 ```
-
-
-📊 SQL Queries Overview
+ 
+ ---
+ 
+## 📊 SQL Queries Overview
 
 The project includes 8 analytical queries demonstrating various SQL techniques:
 
-1. Critical Stockout Alerts
+### 1️⃣ Critical Stockout Alerts
+- Identifies products below reorder point with urgency levels
+- **Techniques:** CASE statements, multi-table joins, ORDER BY with CASE
 
--- Identifies products below reorder point with urgency levels
+### 2️⃣ ABC Inventory Classification
+- Applies the Pareto principle using window functions
+- **Techniques:** CTEs, SUM() OVER(), cumulative percentages
 
--- Techniques: CASE statements, multi-table joins, ORDER BY with CASE
-2. ABC Inventory Classification
+### 3️⃣ Inventory Turnover by Category
+- Calculates turnover ratio and days of inventory outstanding
+- **Techniques:** Multiple CTEs, division by NULLIF, aggregate functions
 
--- Applies Pareto principle using window functions
+### 4️⃣ Reorder Recommendations
+- Smart reorder quantities based on sales velocity
+- **Techniques:** Window functions, calculated fields, priority scoring
 
--- Techniques: CTEs, SUM() OVER(), cumulative percentages
-3. Inventory Turnover by Category
+### 5️⃣ Slow-Moving Inventory
+- Products with low sales tying up capital
+- **Techniques:** LEFT JOIN, date calculations, filtering
 
--- Calculates turnover ratio and days of inventory outstanding
+### 6️⃣ Supplier Performance
+- On-time delivery rates and reliability scoring
+- **Techniques:** Conditional aggregation, percentage calculations
 
--- Techniques: Multiple CTEs, division by NULLIF, aggregate functions
-4. Reorder Recommendations
+### 7️⃣ Inventory Value by Location
+- Capital allocation across warehouses
+- **Techniques:** Grouping, aggregate functions, filtering
 
--- Smart reorder quantities based on sales velocity
+### 8️⃣ Top Revenue Products
+- High-revenue items and their stock status
+- **Techniques:** Joins, aggregations, ranking
 
--- Techniques: Window functions, calculated fields, priority scoring
-5. Slow-Moving Inventory
+---
 
--- Products with low sales tying up capital
+## 🎓 Skills Demonstrated
 
--- Techniques: LEFT JOIN, date calculations, filtering
-6. Supplier Performance
+### ✅ SQL Proficiency
+- Complex multi-table joins (3-5 tables)  
+- Window functions (ROW_NUMBER, SUM OVER, cumulative calculations)  
+- Common Table Expressions (CTEs) for readable queries  
+- Aggregate functions with GROUP BY and HAVING  
+- Date arithmetic and temporal analysis  
+- CASE statements for business logic
 
--- On-time delivery rates and reliability scoring
+### ✅ Data Analysis
+- ABC analysis (Pareto principle application)  
+- Inventory turnover calculations  
+- Time-series analysis (sales trends)  
+- Risk categorization and scoring  
+- Statistical summary generation
 
--- Techniques: Conditional aggregation, percentage calculations
-7. Inventory Value by Location
-sql
--- Capital allocation across warehouses
+### ✅ Business Acumen
+- Understanding of supply chain KPIs  
+- Inventory optimization principles  
+- Cost-benefit analysis mindset  
+- Actionable insights generation  
+- Executive-level reporting
 
--- Techniques: Grouping, aggregate functions, filtering
-8. Top Revenue Products
-sql
--- High-revenue items and their stock status
+### ✅ Data Visualization
+- Multi-panel dashboard layouts  
+- Color-coded alert systems  
+- Pareto charts and cumulative plots  
+- Bar charts, line plots, and pie charts  
+- Clear, business-focused presentation
 
--- Techniques: Joins, aggregations, ranking
+### ✅ Software Engineering
+- Modular code organization  
+- Error handling and data validation  
+- Database schema design  
+- ETL pipeline development  
+- Documentation and commenting
 
-🎓 Skills Demonstrated
+---
 
-✅ SQL Proficiency
-Complex multi-table joins (3-5 tables)
-
-Window functions (ROW_NUMBER, SUM OVER, cumulative calculations)
-
-Common Table Expressions (CTEs) for readable queries
-Aggregate functions with GROUP BY and HAVING
-Date arithmetic and temporal analysis
-CASE statements for business logic
-
-✅ Data Analysis
-ABC analysis (Pareto principle application)
-Inventory turnover calculations
-Time-series analysis (sales trends)
-Risk categorization and scoring
-Statistical summary generation
-
-✅ Business Acumen
-Understanding of supply chain KPIs
-Inventory optimization principles
-Cost-benefit analysis mindset
-Actionable insights generation
-Executive-level reporting
-
-✅ Data Visualization
-Multi-panel dashboard layouts
-Color-coded alert systems
-Pareto charts and cumulative plots
-Bar charts, line plots, and pie charts
-Clear, business-focused presentation
-
-✅ Software Engineering
-Modular code organization
-Error handling and data validation
-Database schema design
-ETL pipeline development
-Documentation and commenting
-
-📈 Business Impact
+## 📈 Business Impact
 
 If implemented in a real business, this system could:
 
-💰 Reduce stockouts by 35% through proactive reorder alerts
+- 💰 Reduce stockouts by 35% through proactive reorder alerts  
+- 🏦 Free up $3,000–$5,000 by liquidating slow-moving inventory  
+- 📊 Improve inventory turnover by 15–20% by focusing on A-items  
+- ⏰ Save 5–10 hours/week in manual inventory monitoring  
+- 🎯 Optimize working capital by right-sizing safety stock levels
 
-🏦 Free up $3,000-$5,000 by liquidating slow-moving inventory
+---
 
-📊 Improve inventory turnover by 15-20% by focusing on A-items
+## 🔮 Future Enhancements
 
-⏰ Save 5-10 hours/week in manual inventory monitoring
+- Machine learning forecasting – LSTM models for demand prediction  
+- Real-time data ingestion – Connect to live ERP systems via API  
+- Automated email alerts – Scheduled reports for critical stockouts  
+- Geographic visualization – Map-based supply chain network view  
+- Multi-echelon optimization – Distribution center allocation  
+- Seasonal adjustment – Account for holiday and seasonal patterns  
+- What-if scenario modeling – Simulate different stocking strategies  
+- Interactive dashboard – Streamlit/Dash web interface with drill-down
 
-🎯 Optimize working capital by right-sizing safety stock levels
+---
 
-🔮 Future Enhancements
- 
- Machine learning forecasting - LSTM models for demand prediction
+## 📚 Learning Resources
 
- Real-time data ingestion - Connect to live ERP systems via API
-
- Automated email alerts - Scheduled reports for critical stockouts
-
- Geographic visualization - Map-based supply chain network view
-
- Multi-echelon optimization - Distribution center allocation
-
- Seasonal adjustment - Account for holiday and seasonal patterns
-
- What-if scenario modeling - Simulate different stocking strategies
-
- Interactive dashboard - Streamlit/Dash web interface with drill-down
-
-📚 Learning Resources
 This project demonstrates concepts from:
 
-SQL: Window functions, CTEs, complex joins
-Inventory Management: ABC analysis, reorder points, turnover ratios
+- **SQL:** Window functions, CTEs, complex joins  
+- **Inventory Management:** ABC analysis, reorder points, turnover ratios  
+- **Data Analysis:** Pandas, aggregations, time-series  
+- **Visualization:** Matplotlib, Seaborn, dashboard design  
 
-Data Analysis: Pandas, aggregations, time-series
+**Recommended Reading:**
 
-Visualization: Matplotlib, Seaborn, dashboard design
-Recommended Reading: Inventory Management Explained - David J. Piasecki
+- *Inventory Management Explained* – David J. Piasecki  
+- *SQL for Data Analysis* – Cathy Tanimura  
+- *Python for Data Analysis* – Wes McKinney
 
-SQL for Data Analysis - Cathy Tanimura
-Python for Data Analysis - Wes McKinney
+---
 
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 📄 License
+
+This project is licensed under the MIT License – see the LICENSE file for details.  
 
 You are free to use this code for learning, portfolio purposes, or commercial applications.
+
 </div>
