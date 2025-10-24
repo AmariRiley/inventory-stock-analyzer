@@ -3,7 +3,23 @@
 
 ### SQL-based inventory analysis system identifying stockout risks and optimizing reorder decisions
 
-</div>
+---
+
+## 📑 Table of Contents
+
+- [💼 Business Problem](#💼-business-problem)
+- [🎯 Key Features](#🎯-key-features)
+- [💡 Key Findings](#💡-key-findings)
+- [📊 Sample Results](#📊-sample-results)
+- [🛠️ Tech Stack](#🛠️-tech-stack)
+- [🚀 Quick Start](#🚀-quick-start)
+- [📁 Project Structure](#📁-project-structure)
+- [📊 SQL Queries Overview](#📊-sql-queries-overview)
+- [🎓 Skills Demonstrated](#🎓-skills-demonstrated)
+- [📈 Business Impact](#📈-business-impact)
+- [🔮 Future Enhancements](#🔮-future-enhancements)
+- [📚 Learning Resources](#📚-learning-resources)
+- [📄 License](#📄-license)
 
 ---
 
@@ -299,4 +315,3 @@ If implemented in a real business, this system could:
 This project is licensed under the MIT License – see the LICENSE file for details.  
 
 You are free to use this code for learning, portfolio purposes, or commercial applications.
-</div>
