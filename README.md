@@ -189,8 +189,7 @@ inventory-stock-analyzer/
 └── LICENSE # MIT license
 ```
  
- ---
- 
+
 ## 📊 SQL Queries Overview
 
 The project includes 8 analytical queries demonstrating various SQL techniques:
