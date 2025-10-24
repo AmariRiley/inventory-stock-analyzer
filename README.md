@@ -181,6 +181,7 @@ After running the scripts, you'll have:
 📁 Project Structure
 
 inventory-stockout-analyzer/
+
 ├── data/                          # Sample CSV source files
 │   ├── products.csv               # 150 product records
 │   ├── suppliers.csv              # 20 supplier records
@@ -254,9 +255,12 @@ sql
 -- Techniques: Joins, aggregations, ranking
 
 🎓 Skills Demonstrated
+
 ✅ SQL Proficiency
 Complex multi-table joins (3-5 tables)
+
 Window functions (ROW_NUMBER, SUM OVER, cumulative calculations)
+
 Common Table Expressions (CTEs) for readable queries
 Aggregate functions with GROUP BY and HAVING
 Date arithmetic and temporal analysis
