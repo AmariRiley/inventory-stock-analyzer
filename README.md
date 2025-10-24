@@ -173,9 +173,13 @@ What Gets Generated
 After running the scripts, you'll have:
 
 ✅ 5 CSV files with sample data in data/
+
 ✅ SQLite database (inventory.db) with 5 tables
+
 ✅ 5 PNG charts in results/ showing key insights
+
 📁 Project Structure
+
 inventory-stockout-analyzer/
 ├── data/                          # Sample CSV source files
 │   ├── products.csv               # 150 product records
@@ -203,40 +207,50 @@ inventory-stockout-analyzer/
 ├── requirements.txt               # Python dependencies
 ├── README.md                      # This file
 └── LICENSE                        # MIT License
+
 📊 SQL Queries Overview
+
 The project includes 8 analytical queries demonstrating various SQL techniques:
 
 1. Critical Stockout Alerts
-sql
+
 -- Identifies products below reorder point with urgency levels
+
 -- Techniques: CASE statements, multi-table joins, ORDER BY with CASE
 2. ABC Inventory Classification
-sql
+
 -- Applies Pareto principle using window functions
+
 -- Techniques: CTEs, SUM() OVER(), cumulative percentages
 3. Inventory Turnover by Category
-sql
+
 -- Calculates turnover ratio and days of inventory outstanding
+
 -- Techniques: Multiple CTEs, division by NULLIF, aggregate functions
 4. Reorder Recommendations
-sql
+
 -- Smart reorder quantities based on sales velocity
+
 -- Techniques: Window functions, calculated fields, priority scoring
 5. Slow-Moving Inventory
-sql
+
 -- Products with low sales tying up capital
+
 -- Techniques: LEFT JOIN, date calculations, filtering
 6. Supplier Performance
-sql
+
 -- On-time delivery rates and reliability scoring
+
 -- Techniques: Conditional aggregation, percentage calculations
 7. Inventory Value by Location
 sql
 -- Capital allocation across warehouses
+
 -- Techniques: Grouping, aggregate functions, filtering
 8. Top Revenue Products
 sql
 -- High-revenue items and their stock status
+
 -- Techniques: Joins, aggregations, ranking
 
 🎓 Skills Demonstrated
