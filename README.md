@@ -227,21 +227,35 @@ ETL pipeline development
 Documentation and commenting
 
 📈 Business Impact
+
 If implemented in a real business, this system could:
 
 💰 Reduce stockouts by 35% through proactive reorder alerts
+
 🏦 Free up $3,000-$5,000 by liquidating slow-moving inventory
+
 📊 Improve inventory turnover by 15-20% by focusing on A-items
+
 ⏰ Save 5-10 hours/week in manual inventory monitoring
+
 🎯 Optimize working capital by right-sizing safety stock levels
+
 🔮 Future Enhancements
+ 
  Machine learning forecasting - LSTM models for demand prediction
+
  Real-time data ingestion - Connect to live ERP systems via API
+
  Automated email alerts - Scheduled reports for critical stockouts
+
  Geographic visualization - Map-based supply chain network view
+
  Multi-echelon optimization - Distribution center allocation
+
  Seasonal adjustment - Account for holiday and seasonal patterns
+
  What-if scenario modeling - Simulate different stocking strategies
+
  Interactive dashboard - Streamlit/Dash web interface with drill-down
 
 📚 Learning Resources
@@ -249,12 +263,15 @@ This project demonstrates concepts from:
 
 SQL: Window functions, CTEs, complex joins
 Inventory Management: ABC analysis, reorder points, turnover ratios
+
 Data Analysis: Pandas, aggregations, time-series
+
 Visualization: Matplotlib, Seaborn, dashboard design
-Recommended Reading:
-Inventory Management Explained - David J. Piasecki
+Recommended Reading: Inventory Management Explained - David J. Piasecki
+
 SQL for Data Analysis - Cathy Tanimura
 Python for Data Analysis - Wes McKinney
+
 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
